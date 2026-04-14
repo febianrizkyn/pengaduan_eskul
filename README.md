@@ -27,15 +27,6 @@ Sistem pengaduan dan aspirasi siswa kepada organisasi ekstrakulikuler sekolah de
 - Kelola aspirasi (update status, berikan feedback)
 - Kelola kategori pengaduan
 
-### Ganti config
-
-// Timezone
-date_default_timezone_set('Asia/Jakarta');
-
-// Session
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
 
 ## Struktur Folder
 
