@@ -27,6 +27,32 @@ Sistem pengaduan dan aspirasi siswa kepada organisasi ekstrakulikuler sekolah de
 - Kelola aspirasi (update status, berikan feedback)
 - Kelola kategori pengaduan
 
+### Ganti config
+
+<?php
+// Konfigurasi Database (INFINITYFREE)
+define('DB_HOST', 'localhost'); // ganti dari panel
+define('DB_NAME', 'db_pengaduan_eskul');    // nama database lu
+define('DB_USER', 'root');            // username
+define('DB_PASS', '');             // password database
+
+// Konfigurasi Aplikasi
+$protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
+$domain = $_SERVER['HTTP_HOST'];
+$dir = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME']));
+$dir = $dir === '/' ? '' : $dir;
+define('BASE_URL', $protocol . "://" . $domain . $dir . "/");
+
+define('APP_NAME', 'Sistem Pengaduan Ekstrakulikuler');
+
+// Timezone
+date_default_timezone_set('Asia/Jakarta');
+
+// Session
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 ## Struktur Folder
 
 ```
